@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <title>Кликер</title>
+</head>
+<body>
+    <div class="top-buttons-container">
+        <button class="top-button" id="openSkinsButton">Скины</button>
+        <button class="top-button" id="openShopButton">Магазин</button>
+    </div>
+    <div class="points-container">
+    </div>
+    <div class="container">
+        <h1>Хамстер!🐹</h1>
+        <div class="stats">
+            <p>Очки: <span id="points">0</span></p>
+            <p>Уровень: <span id="level">1</span></p>
+            <p>Очки в секунду: <span id="pointsPerSecond">0</span></p>
+            <p>Стоимость повышения уровня: <span id="levelUpCost">100</span></p>
+        </div>
+        <div class="buttons-container">
+            <button id="clickButton" class="image-button">
+                <img src="click-image.png" alt="Click me">
+            </button>
+            <button id="levelUpButton" class="button">Повысить уровень</button>
+        </div>
+    </div>
+    <div class="shop-container" id="shopContainer">
+        <button class="close-button" id="closeShopButton">Закрыть</button>
+        <div id="shopItemsWrapper">
+            <div class="shop-item" data-price="100" data-autoclicker="true">
+                <p>Автокликер</p>
+                <img src="autoclicker-image.png" alt="Автокликер" class="shop-image">
+                <button class="buy-button">100$</button>
+            </div>
+            <div class="shop-item" data-price="200" data-skin="button2-image.png">
+                <p>Сидень</p>
+                <img src="button2-image.png" alt="Кнопка 2" class="shop-image">
+                <button class="buy-button">200$</button>
+            </div>
+            <div class="shop-item" data-price="300" data-skin="button3-image.png">
+                <p>Горб</p>
+                <img src="button3-image.png" alt="Кнопка 3" class="shop-image">
+                <button class="buy-button">300$</button>
+            </div>
+        </div>
+    </div>
+    <div class="skins-container" id="skinsContainer">
+        <button class="close-button" id="closeSkinsButton">Закрыть</button>
+        <div id="skinsWrapper">
+            <div class="skin-item" data-skin="click-image.png" data-purchased="true">
+                <p>Стандарт</p>
+                <img src="click-image.png" alt="Стандартный скин" class="skin-image">
+                <button class="select-skin-button">Выбрать</button>
+            </div>
+            <div class="skin-item" data-skin="button2-image.png" data-purchased="false">
+                <p>Сидень</p>
+                <img src="button2-image.png" alt="Скин Сидень" class="skin-image">
+                <button class="select-skin-button" disabled>Выбрать</button>
+            </div>
+            <div class="skin-item" data-skin="button3-image.png" data-purchased="false">
+                <p>Горб</p>
+                <img src="button3-image.png" alt="Скин Горб" class="skin-image">
+                <button class="select-skin-button" disabled>Выбрать</button>
+            </div>
+        </div>
+    </div>
+    <div id="notification" class="notification">Успешно!</div>
+    <script src="script.js"></script>
+</body>
+</html>
